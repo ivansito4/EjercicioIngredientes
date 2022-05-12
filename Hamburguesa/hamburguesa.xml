@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ejercicio>
+    <Hamburguesa>
+       <Nombre>Woper</Nombre>
+       <Ingrediente>Pan</Ingrediente> 
+       <Ingrediente>Carne</Ingrediente>
+       <Ingrediente>Lechuga</Ingrediente>
+    </Hamburguesa>
+    <Hamburguesa>
+       <Nombre>Long_Chiken</Nombre>
+       <Ingrediente>Pan</Ingrediente> 
+       <Ingrediente>Pollo</Ingrediente>
+       <Ingrediente>Lechuga</Ingrediente>
+       <Ingrediente>Mayonesa</Ingrediente>
+    </Hamburguesa>
+    <Hamburguesa>
+       <Nombre>Hamburguesa_de_un_euro</Nombre>
+       <Ingrediente>Pan</Ingrediente> 
+       <Ingrediente>Carne</Ingrediente>
+    </Hamburguesa>
+</Ejercicio>

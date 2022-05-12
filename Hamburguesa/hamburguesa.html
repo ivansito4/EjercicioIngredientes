@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function loquesea()
+        {
+            let xhttp=new XMLHttpRequest();
+            xhttp.open("GET", "hamburguesa.xml");
+            xhttp.send();
+            xhttp.onreadystatechange=function(){
+                if(xhttp.readyState==4 && xhttp.status==200)
+                {
+                    let xml=xhttp.responseXML;
+                    console.log(xml.responseText);
+                    let ham=xml.getElementsByTagName("Hamburguesa");
+                    
+                    for (let i = 0; i < ham.length; i++) {
+                        let txt_nombre=ham[i].getElementsByTagName("Nombre")[0].childNodes[0].nodeValue;
+                        let txt="";
+                        let lista_ing=ham[i].getElementsByTagName("Ingrediente");
+                        for (let j = 0; j < lista_ing.length; j++) {
+                            let txt_ing=lista_ing[j].childNodes[0].nodeValue;
+                            txt=txt+txt_ing+" ";
+                        }
+                        let p=document.createElement("p");
+                        p.innerHTML=txt_nombre+" "+txt;
+                        document.body.appendChild(p);
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="loquesea()">
+    
+</body>
+</html>
